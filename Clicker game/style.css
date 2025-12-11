@@ -1,0 +1,97 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+}
+
+#counterDisplay {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resetButton {
+    background-color: #f44336; /* Red color for reset */
+}
+
+#resetButton:hover {
+    background-color: #e53935;
+}
+
+/* Progress bar styling */
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Start at 0% */
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.2s ease;
+}
+
+/* Background styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg'); /* Path to your image */
+    background-size: cover; /* Makes the image cover the entire screen */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Alternatively, if you want the image to apply to the game container only */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-image: url('background.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+}

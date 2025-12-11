@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+  height: 100vh;             /* full-screen height */
+  margin: 0;
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 48px;   /* make title larger */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;   /* subtitle size */
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 24px;       /* bigger button */
+  font-size: 20px;          /* bigger text */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Ensure screen children stack and have spacing, and make canvas responsive
+   so buttons remain visible on smaller viewports */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.screen {
+  display: none; /* hidden by default */
+}
+
+.screen.active {
+  display: block; /* only active screen shows */
+}
+
+canvas {
+  border: 2px solid white;
+  max-width: 90vw;
+  max-height: 50vh;
+}
