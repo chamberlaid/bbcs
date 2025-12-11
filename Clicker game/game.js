@@ -7,7 +7,7 @@ const messageDisplay = document.getElementById('messageDisplay'); // To display 
 
 // Initial counter value and max counter value for progress bar
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
-const maxCounter = 100;
+const maxCounter = 1000000;
 
 // Update the counter display with a '$' symbol
 function updateCounter() {
@@ -27,7 +27,7 @@ function saveProgress() {
 
 // Function to generate a random number between 1 and 100
 function getRandomNumber() {
-    return Math.floor(Math.random() * 100) + 1; // Random number from 1 to 100
+    return Math.floor(Math.random() * 1000) + 1; // Random number from 1 to 100
 }
 
 // Function to check if the player reaches the exact target or exceeds it
