@@ -3,11 +3,13 @@ const counterDisplay = document.getElementById('counterDisplay');
 const clickButton = document.getElementById('clickButton');
 const resetButton = document.getElementById('resetButton'); // Reset button element
 const progressBar = document.getElementById('progressBar');
-const messageDisplay = document.getElementById('messageDisplay'); // To display success/fail messages
+const popupModal = document.getElementById('popupModal'); // Modal container
+const popupMessage = document.getElementById('popupMessage'); // Message in modal
+const closeModalButton = document.getElementById('closeModal'); // Close button in modal
 
 // Initial counter value and max counter value for progress bar
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
-const maxCounter = 1000000;
+const maxCounter = 100;
 
 // Update the counter display with a '$' symbol
 function updateCounter() {
@@ -26,26 +28,36 @@ function saveProgress() {
 }
 
 // Function to generate a random number between 1 and 100
-function getRandomNumber() {
-    return Math.floor(Math.random() * 1000) + 1; // Random number from 1 to 100
-}
+//function getRandomNumber() {
+//    return Math.floor(Math.random() * 100) + 1; // Random number from 1 to 100
+//}
 
 // Function to check if the player reaches the exact target or exceeds it
 function checkProgress() {
     if (counter === maxCounter) {
-        messageDisplay.textContent = "Success! You've reached the exact target!";
-        messageDisplay.style.color = 'green';  // Success message color
+        showPopup("Success! You've found a way to destroy the Asteroids!", 'green');
     } else if (counter > maxCounter) {
-        messageDisplay.textContent = "Fail! You exceeded the target!";
-        messageDisplay.style.color = 'red';  // Fail message color
+        showPopup("Fail! You Died!", 'red');
     }
 }
+
+// Show the popup modal with a success or fail message
+function showPopup(message, color) {
+    popupMessage.textContent = message;
+    popupMessage.style.color = color;  // Set message color (green for success, red for fail)
+    popupModal.style.display = 'flex'; // Show the popup
+}
+
+// Close the popup modal
+closeModalButton.addEventListener('click', () => {
+    popupModal.style.display = 'none'; // Hide the popup
+});
 
 // Handle the click event (increase counter by a random number)
 clickButton.addEventListener('click', () => {
     if (counter < maxCounter) {
-        const randomIncrement = getRandomNumber();
-        counter += randomIncrement; // Increase counter by the random value
+        //const randomIncrement = getRandomNumber();
+        counter += 1; // Increase counter by the random value
         updateCounter();
         updateProgressBar();
         saveProgress(); // Save progress every time the button is clicked
@@ -58,7 +70,8 @@ resetButton.addEventListener('click', () => {
     counter = 0; // Reset counter
     updateCounter(); // Update display
     updateProgressBar(); // Reset progress bar
-    messageDisplay.textContent = ''; // Clear the message
+    popupMessage.textContent = ''; // Clear the message
+    popupModal.style.display = 'none'; // Hide the popup
     localStorage.removeItem('counter'); // Remove progress from localStorage
 });
 
