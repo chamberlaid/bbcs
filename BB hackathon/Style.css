@@ -1,9 +1,9 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertical centering */
-  align-items: center;       /* horizontal centering */
-  height: 100vh;             /* full-screen height */
+  justify-content: center;   
+  align-items: center;       
+  height: 100vh;             
   margin: 0;
   background: black;
   color: white;
@@ -12,24 +12,23 @@ body {
 }
 
 h1 {
-  font-size: 48px;   /* make title larger */
+  font-size: 48px;   
   margin-bottom: 10px;
 }
 
 p {
-  font-size: 20px;   /* subtitle size */
+  font-size: 20px;   
   margin-bottom: 20px;
 }
 
 button {
-  padding: 12px 24px;       /* bigger button */
-  font-size: 20px;          /* bigger text */
+  padding: 12px 24px;       
+  font-size: 20px;          
   border-radius: 8px;
   cursor: pointer;
 }
 
-/* Ensure screen children stack and have spacing, and make canvas responsive
-   so buttons remain visible on smaller viewports */
+
 .screen {
   display: flex;
   flex-direction: column;
@@ -38,11 +37,11 @@ button {
 }
 
 .screen {
-  display: none; /* hidden by default */
+  display: none; 
 }
 
 .screen.active {
-  display: block; /* only active screen shows */
+  display: block; 
 }
 
 canvas {

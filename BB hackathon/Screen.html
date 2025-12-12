@@ -4,35 +4,30 @@
   <meta charset="UTF-8" />
   <title>AstroBeat Defender</title>
 
-  <!-- Link your CSS file -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-  <!-- START SCREEN -->
   <div id="start-screen" class="screen active">
     <h1>AstroBeat Defender</h1>
     <p>Hit the asteroids to the beat and save Earth!</p>
     <button id="start-btn">Start Game</button>
   </div>
+  
 
-  <!-- GAME SCREEN -->
   <div id="game-screen" class="screen">
     <h2>Defend Earth</h2>
     <p>Score: <span id="score">0</span> | HP: <span id="hp">5</span></p>
     <canvas id="game-canvas" width="600" height="400"></canvas>
   </div>
 
-  <!-- END SCREEN -->
   <div id="end-screen" class="screen">
     <h1>Game Over</h1>
     <p>Your final score: <span id="final-score">0</span></p>
     <button id="restart-btn">Play Again</button>
   </div>
 
-  <!-- Background music (optional) -->
   <audio id="bg-music" src="assets/bgmusic.mp3"></audio>
 
-  <!-- Link your JS file (put this at the bottom of body) -->
   <script src="game.js"></script>
 </body>
 </html>
