@@ -27,6 +27,27 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
 }
 
+// Function to check if the player reaches the exact target or exceeds it
+function checkProgress() {
+    if (counter === maxCounter) {
+        showPopup("Success! You've reached the exact target!", 'green');
+    } else if (counter > maxCounter) {
+        showPopup("Fail! You exceeded the target!", 'red');
+    }
+}
+
+// Show the popup modal with a success or fail message
+function showPopup(message, color) {
+    popupMessage.textContent = message;
+    popupMessage.style.color = color;  // Set message color (green for success, red for fail)
+    popupModal.style.display = 'flex'; // Show the popup
+}
+
+// Close the popup modal
+closeModalButton.addEventListener('click', () => {
+    popupModal.style.display = 'none'; // Hide the popup
+});
+
 function checkMilestones() {
     const milestones = [5, 10, 25, 50, 70, 80];
     const progressPercentage = (counter / maxCounter) * 100;
@@ -48,6 +69,7 @@ clickButton.addEventListener('click', () => {
         updateCounter();
         updateProgressBar();
         saveProgress();
+        checkProgress();
         checkMilestones();
     }
 });
@@ -71,3 +93,4 @@ window.onload = () => {
 
 updateCounter();
 updateProgressBar();
+checkProgress();
