@@ -9,7 +9,7 @@ const closeModalButton = document.getElementById('closeModal');
 
 
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
-const maxCounter = 100;
+const maxCounter = 10000;
 
 
 function updateCounter() {
