@@ -157,3 +157,23 @@ a:hover {
 #backgroundOptions img:hover {
     transform: scale(1.1);
 }
+
+.page-link-btn {
+    position: fixed;
+    bottom: 20px;       /* Distance from bottom */
+    right: 20px;        /* Distance from right side */
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 9999;      /* Ensures it stays on top */
+}
+
+.page-link-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
