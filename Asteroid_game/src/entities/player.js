@@ -106,7 +106,7 @@ export class Player {
 		this.mesh.position.z = THREE.MathUtils.clamp(this.mesh.position.z, 4, 12);
 
 		// banking (feels like a real ship)
-    const targetRoll = THREE.MathUtils.clamp(-moveX * 1.2, -0.5, 0.5);
+    const targetRoll = THREE.MathUtils.clamp(moveX * 1.2, -0.5, 0.5);
 		this.mesh.rotation.z += (targetRoll - this.mesh.rotation.z) * 0.15;
 
 		// engine pulse
