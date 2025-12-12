@@ -7,6 +7,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-size: cover; /* Ensure background image covers the page */
+    background-position: center center; /* Center the background */
 }
 
 .container {
@@ -113,9 +115,9 @@ button:hover {
 }
 
 /* Background styling */
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg'); /* Path to your image */
     background-size: cover; /* Makes the image cover the entire screen */
     background-position: center center; /* Centers the background image */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
@@ -126,3 +128,32 @@ body {
     margin: 0;
 }
 
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Cosmetic Page - Background Options */
+#backgroundOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#backgroundOptions img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#backgroundOptions img:hover {
+    transform: scale(1.1);
+}
